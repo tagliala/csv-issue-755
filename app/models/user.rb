@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-  validates_email :email # cient side validation of email
-  validates_password :password #client side validation of password
+  validates :email, email: true # cient side validation of email
+  validates :password, password: true #client side validation of password
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable

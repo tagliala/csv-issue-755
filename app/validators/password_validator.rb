@@ -5,10 +5,3 @@ class PasswordValidator < ActiveModel::EachValidator
     end
   end
 end
-
-# This allows us to assign the validator in the model
-module ActiveModel::Validations::HelperMethods
-  def validates_password(*attr_names)
-    validates_with PasswordValidator, _merge_attributes(attr_names)
-  end
-end
